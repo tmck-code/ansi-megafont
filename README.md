@@ -3,10 +3,15 @@
 A single font for displaying ANSI images that combines several Amiga & IBM fonts.
 
 - [ansi-megafont](#ansi-megafont)
+  - [Get the font](#get-the-font)
   - [Credits](#credits)
   - [Font Codepage Mappings](#font-codepage-mappings)
 
 ---
+
+## Get the font
+
+Download the font file from the [latest release](https://github.com/tmck-code/ansi-megafont/releases/latest).
 
 ## Credits
 
