@@ -170,11 +170,11 @@ for font_name in FONTS:
 
 FontMetrics.to_font(base_font, dims)
 
-base_font.generate(f'{sys.argv[2]}.ttf')
+base_font.generate(f'dist/{sys.argv[2]}.ttf')
 base_font.close()
 
-font = fontforge.open(f'{sys.argv[2]}.ttf')
+font = fontforge.open(f'dist/{sys.argv[2]}.ttf')
 FontMetrics.to_font(font, dims)
 font.close()
 
-print(f'\x1b[32m! Wrote combined font to '{sys.argv[2]}.ttf' ({sys.argv[2]})\x1b[0m')
+print(f"\x1b[32m! Wrote combined font to '{sys.argv[2]}.ttf' ({sys.argv[2]})\x1b[0m")
