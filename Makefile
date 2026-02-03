@@ -1,16 +1,19 @@
-remap_fonts:
-	rm -rf fontsPatched
-	mkdir -p fontsPatched
-	fontforge -script bin/remap_font.py fonts/Ac437_IBM_VGA_9x16.ttf   fontsPatched/Ac437_IBM_VGA_9x16.patched.ttf CP437
-	fontforge -script bin/remap_font.py fonts/MicroKnightPlus_v1.0.ttf fontsPatched/MicroKnightPlus.patched.ttf    ISO
-	fontforge -script bin/remap_font.py fonts/"mO'sOul_v1.0.ttf"       fontsPatched/"mO'sOul.patched.ttf"          ISO
-	fontforge -script bin/remap_font.py fonts/P0T-NOoDLE_v1.0.ttf      fontsPatched/P0T-NOoDLE.patched.ttf         ISO
-	fontforge -script bin/remap_font.py fonts/TopazPlus_a1200_v1.0.ttf fontsPatched/TopazPlus_a1200.patched.ttf    ISO
-	fontforge -script bin/remap_font.py fonts/TopazPlus_a500_v1.0.ttf  fontsPatched/TopazPlus_a500.patched.ttf     ISO
+docker/build:
+	docker build -f ops/Dockerfile -t ghcr.io/tmck-code/ansi-megafont:latest .
 
-combine_fonts:
-	fontforge -script ./bin/forge.py ./fontsPatched/ TopazPlusPlus
+docker/fonts:
+	docker run --rm \
+		-v ${PWD}/patched:/app/patched \
+		ghcr.io/tmck-code/ansi-megafont:latest \
+			./ops/remap.sh
 
-all: remap_fonts combine_fonts
+docker/forge:
+	docker run --rm \
+		-v ${PWD}/patched:/app/patched \
+		-v ${PWD}/dist:/app/dist \
+		ghcr.io/tmck-code/ansi-megafont:latest \
+			bash -c "fontforge -script ./bin/forge.py ./patched/ TopazPlusPlus 2> /dev/null"
 
-.PHONY: remap_fonts combine_fonts all
+all: docker/build docker/fonts docker/forge
+
+.PHONY: docker/build docker/fonts docker/forge all
