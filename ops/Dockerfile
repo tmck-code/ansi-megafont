@@ -1,0 +1,16 @@
+FROM python:3.14-slim
+
+RUN apt update && \
+    apt upgrade -y && \
+    DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
+        fontforge git wget unzip && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /fonts
+RUN git clone https://github.com/rewtnull/amigafonts.git ./amigafonts \
+    && wget --progress=dot:mega https://int10h.org/oldschool-pc-fonts/download/oldschool_pc_font_pack_v2.2_linux.zip \
+    && unzip -q -d ./ibm oldschool_pc_font_pack_v2.2_linux.zip
+
+WORKDIR /app
+COPY . /app
