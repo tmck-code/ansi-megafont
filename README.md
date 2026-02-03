@@ -13,6 +13,35 @@ A single font for displaying ANSI images that combines several Amiga & IBM fonts
 
 Download the font file from the [latest release](https://github.com/tmck-code/ansi-megafont/releases/latest).
 
+## Installation
+
+To install:
+- download the [`latest release`](https://github.com/tmck-code/ansi-megafont)
+- install it on your system via your regular font installer
+- and ensure that your terminal emulator is configured to use it._
+
+<details>
+<summary>
+Alternatively, you can install using one of these commands:
+</summary>
+
+> [!NOTE]
+> _You will still need to configure your terminal to use the font_
+
+```shell
+# osx
+curl -sOL --output-dir ~/Library/Fonts/ https://github.com/tmck-code/ansi-megafont/releases/download/v0.1.0/TopazPlusPlus.ttf \
+  && fc-cache -f ~/Library/Fonts/ \
+  && fc-list | grep "TopazPlusPlus"
+
+# linux
+curl -sOL --output-dir ~/.fonts/ https://github.com/tmck-code/ansi-megafont/releases/download/v0.1.0/TopazPlusPlus.ttf \
+  && fc-cache -f ~/.fonts/ \
+  && fc-list | grep "TopazPlusPlus"
+```
+
+</details>
+
 ## Credits
 
 Fonts are from:
