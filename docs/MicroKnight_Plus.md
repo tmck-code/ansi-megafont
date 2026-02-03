@@ -2,16 +2,8 @@
 
 > **Unicode Range:** U+E300 - U+E3FF
 
-<style>
-.font-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 11px; }
-.font-table th, .font-table td { border: 1px solid #ddd; padding: 4px; text-align: center; overflow: hidden; }
-.font-table th { background-color: #f4f4f4; font-weight: bold; }
-.font-table td img { max-width: 100%; height: auto; display: block; margin: 2px auto; }
-.font-table td code { font-size: 9px; }
-</style>
 
-
-<table class="font-table">
+<table class="font-table" style="width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 11px;">
 <thead>
 <tr>
 <th></th>
