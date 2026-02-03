@@ -15,22 +15,32 @@ FONTS = (
 )
 
 class FontMetrics(NamedTuple):
-    em_size:     int
-    ascent:      int
-    descent:     int
-    os2_ascent:  int
-    os2_descent: int
-    os2_linegap: int
+    em_size:         int
+    ascent:          int
+    descent:         int
+    os2_typoascent:  int = 0
+    os2_typodescent: int = 0
+    os2_typolinegap: int = 0
+    hea_ascent:      int = 0
+    hea_descent:     int = 0
+    hea_linegap:     int = 0
+    os2_winascent:   int = 0
+    os2_windescent:  int = 0
 
     @classmethod
     def from_font(cls, font):
         return cls(
-            em_size     = font.em,
-            ascent      = font.ascent,
-            descent     = font.descent,
-            os2_ascent  = font.os2_typoascent,
-            os2_descent = font.os2_typodescent,
-            os2_linegap = font.os2_typolinegap,
+            em_size         = font.em,
+            ascent          = font.ascent,
+            descent         = font.descent,
+            os2_typoascent  = font.os2_typoascent,
+            os2_typodescent = font.os2_typodescent,
+            os2_typolinegap = font.os2_typolinegap,
+            hea_ascent      = font.hhea_ascent,
+            hea_descent     = font.hhea_descent,
+            hea_linegap     = font.hhea_linegap,
+            os2_winascent   = font.os2_winascent,
+            os2_windescent  = font.os2_windescent,
         )
 
     @classmethod
@@ -38,9 +48,14 @@ class FontMetrics(NamedTuple):
         font.em                   = dims.em_size
         font.ascent               = dims.ascent
         font.descent              = dims.descent
-        font.os2_typoascent       = dims.os2_ascent
-        font.os2_typodescent      = dims.os2_descent
-        font.os2_typolinegap      = dims.os2_linegap
+        font.os2_typoascent       = dims.os2_typoascent
+        font.os2_typodescent      = dims.os2_typodescent
+        font.os2_typolinegap      = dims.os2_typolinegap
+        font.hhea_ascent          = dims.hea_ascent
+        font.hhea_descent         = dims.hea_descent
+        font.hhea_linegap         = dims.hea_linegap
+        font.os2_winascent        = dims.os2_winascent
+        font.os2_windescent       = dims.os2_windescent
         font.os2_use_typo_metrics = True
 
 def find_files(dirpath: str) -> dict[str, dict[str, str | int]]:
@@ -135,7 +150,7 @@ base_font.familyname = sys.argv[2]
 dims = FontMetrics.from_font(base_font)
 
 print(f'Using metrics from: {fonts['topazplus_a1200']['fpath']}')
-print(f'> {dims.em_size=}, {dims.ascent=}, {dims.descent=}, {dims.os2_ascent=}, {dims.os2_descent=}, {dims.os2_linegap=}')
+print(f'> {dims.em_size=}, {dims.ascent=}, {dims.descent=}, {dims.os2_typoascent=}, {dims.os2_typodescent=}, {dims.os2_typolinegap=}')
 
 print('Included fonts:')
 print('\n'.join([f' - {name}: {info['fpath']}' for name, info in fonts.items()]))

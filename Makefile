@@ -12,7 +12,7 @@ docker/forge:
 		-v ${PWD}/patched:/app/patched \
 		-v ${PWD}/dist:/app/dist \
 		ghcr.io/tmck-code/ansi-megafont:latest \
-			bash -c "fontforge -script ./bin/forge.py ./patched/ TopazPlusPlus 2> /dev/null"
+			bash -c "fontforge -script ./bin/forge.py ./patched/ TopazPlusPlus"
 
 all: docker/build docker/fonts docker/forge
 
