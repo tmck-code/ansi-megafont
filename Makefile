@@ -1,9 +1,12 @@
 docker/build:
-	docker build -f ops/Dockerfile -t ghcr.io/tmck-code/ansi-megafont:latest .
+	docker build \
+		-f ops/Dockerfile \
+		-t ghcr.io/tmck-code/ansi-megafont:latest \
+		.
 
 docker/fonts:
 	docker run --rm \
-		-v ${PWD}/fonts/remapped:/app/fonts/remapped \
+		-v ${PWD}/fonts:/app/fonts \
 		ghcr.io/tmck-code/ansi-megafont:latest \
 			./ops/remap.sh
 

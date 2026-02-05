@@ -132,6 +132,7 @@ def copyTo(sourceFont, sourceIdx, targetFont, targetIdx, sourceDims=None, target
         needs_transform = True
 
     if needs_transform:
+        print(f'> applying transformation: scale_x={scale_x}, offset_y={offset_y}')
         # Create transformation matrix: [xx, xy, yx, yy, dx, dy]
         matrix = (scale_x, 0, 0, 1, 0, offset_y)
         glyph.transform(matrix)
@@ -144,7 +145,7 @@ print(f'converting {sys.argv[1]} to {sys.argv[2]}')
 fonts = find_files(sys.argv[1])
 base_font = fontforge.open(fonts['topazplus_a1200']['fpath'])
 base_font.encoding = 'UnicodeFull'
-base_font.fontname = sys.argv[3]
+base_font.fontname = sys.argv[3].replace(' ', '')
 base_font.familyname = sys.argv[3]
 
 dims = FontMetrics.from_font(base_font)
@@ -167,10 +168,12 @@ for font_name in FONTS:
     print(f'> {source_font.em=}, {source_font.ascent=}, {source_font.descent=}, {source_font.os2_typoascent=}, {source_font.os2_typodescent=}, {source_font.os2_typolinegap=}')
 
     # Calculate horizontal scaling factor dynamically
-    scale_x = calculate_scale_factor(source_font, base_font)
-    if scale_x != 1.0:
-        print(f'> calculated horizontal scale factor: {scale_x:.3f}')
-
+    if 'ibm' in font_name:
+        scale_x = calculate_scale_factor(source_font, base_font)
+        if scale_x != 1.0:
+            print(f'> calculated horizontal scale factor: {scale_x:.3f}')
+    else:
+        scale_x = 1.0
     if font_name == 'topazplus_a1200':
         for i in range(256):
             copyTo(source_font, i, base_font, i, source_dims, dims, scale_x)
