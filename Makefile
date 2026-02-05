@@ -9,10 +9,12 @@ docker/fonts:
 
 docker/forge:
 	docker run --rm \
-		-v ${PWD}/fonts/remapped:/app/fonts/remapped \
-		-v ${PWD}/dist:/app/dist \
+		-v ${PWD}/fonts:/app/fonts \
 		ghcr.io/tmck-code/ansi-megafont:latest \
-			bash -c "fontforge -script ./bin/forge.py ./fonts/remapped/ ANSICombined"
+			fontforge -script ./bin/forge.py \
+				./fonts/remapped/ \
+				./fonts/ANSICombined.ttf \
+				'ANSI Combined'
 
 all: docker/build docker/fonts docker/forge
 

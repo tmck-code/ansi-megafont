@@ -144,17 +144,16 @@ print(f'converting {sys.argv[1]} to {sys.argv[2]}')
 fonts = find_files(sys.argv[1])
 base_font = fontforge.open(fonts['topazplus_a1200']['fpath'])
 base_font.encoding = 'UnicodeFull'
-base_font.fontname = sys.argv[2]
-base_font.familyname = sys.argv[2]
+base_font.fontname = sys.argv[3]
+base_font.familyname = sys.argv[3]
 
 dims = FontMetrics.from_font(base_font)
 
-print(f'Using metrics from: {fonts['topazplus_a1200']['fpath']}')
+print(f'Using metrics from: {fonts["topazplus_a1200"]["fpath"]}')
 print(f'> {dims.em_size=}, {dims.ascent=}, {dims.descent=}, {dims.os2_typoascent=}, {dims.os2_typodescent=}, {dims.os2_typolinegap=}')
 
 print('Included fonts:')
-print('\n'.join([f' - {name}: {info['fpath']}' for name, info in fonts.items()]))
-
+print('\n'.join([f' - {name}: {info["fpath"]}' for name, info in fonts.items()]))
 for font_name in FONTS:
     if font_name not in fonts:
         print(f'skipping missing font: {font_name}')
@@ -185,11 +184,11 @@ for font_name in FONTS:
 
 FontMetrics.to_font(base_font, dims)
 
-base_font.generate(f'dist/{sys.argv[2]}.ttf')
+base_font.generate(f'{sys.argv[2]}')
 base_font.close()
 
-font = fontforge.open(f'dist/{sys.argv[2]}.ttf')
+font = fontforge.open(f'{sys.argv[2]}')
 FontMetrics.to_font(font, dims)
 font.close()
 
-print(f"\x1b[32m! Wrote combined font to '{sys.argv[2]}.ttf' ({sys.argv[2]})\x1b[0m")
+print(f"\x1b[32m! Wrote combined font to '{sys.argv[2]}' ({sys.argv[3]})\x1b[0m")
