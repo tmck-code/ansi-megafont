@@ -3,9 +3,6 @@ __pycache__/
 *.py[codz]
 *$py.class
 
-# font files
-patched/
-
 # C extensions
 *.so
 
