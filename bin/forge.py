@@ -132,6 +132,7 @@ def copyTo(sourceFont, sourceIdx, targetFont, targetIdx, sourceDims=None, target
         needs_transform = True
 
     if needs_transform:
+        print(f'> applying transformation: scale_x={scale_x}, offset_y={offset_y}')
         # Create transformation matrix: [xx, xy, yx, yy, dx, dy]
         matrix = (scale_x, 0, 0, 1, 0, offset_y)
         glyph.transform(matrix)
@@ -144,17 +145,16 @@ print(f'converting {sys.argv[1]} to {sys.argv[2]}')
 fonts = find_files(sys.argv[1])
 base_font = fontforge.open(fonts['topazplus_a1200']['fpath'])
 base_font.encoding = 'UnicodeFull'
-base_font.fontname = sys.argv[2]
-base_font.familyname = sys.argv[2]
+base_font.fontname = sys.argv[3].replace(' ', '')
+base_font.familyname = sys.argv[3]
 
 dims = FontMetrics.from_font(base_font)
 
-print(f'Using metrics from: {fonts['topazplus_a1200']['fpath']}')
+print(f'Using metrics from: {fonts["topazplus_a1200"]["fpath"]}')
 print(f'> {dims.em_size=}, {dims.ascent=}, {dims.descent=}, {dims.os2_typoascent=}, {dims.os2_typodescent=}, {dims.os2_typolinegap=}')
 
 print('Included fonts:')
-print('\n'.join([f' - {name}: {info['fpath']}' for name, info in fonts.items()]))
-
+print('\n'.join([f' - {name}: {info["fpath"]}' for name, info in fonts.items()]))
 for font_name in FONTS:
     if font_name not in fonts:
         print(f'skipping missing font: {font_name}')
@@ -168,10 +168,12 @@ for font_name in FONTS:
     print(f'> {source_font.em=}, {source_font.ascent=}, {source_font.descent=}, {source_font.os2_typoascent=}, {source_font.os2_typodescent=}, {source_font.os2_typolinegap=}')
 
     # Calculate horizontal scaling factor dynamically
-    scale_x = calculate_scale_factor(source_font, base_font)
-    if scale_x != 1.0:
-        print(f'> calculated horizontal scale factor: {scale_x:.3f}')
-
+    if 'ibm' in font_name:
+        scale_x = calculate_scale_factor(source_font, base_font)
+        if scale_x != 1.0:
+            print(f'> calculated horizontal scale factor: {scale_x:.3f}')
+    else:
+        scale_x = 1.0
     if font_name == 'topazplus_a1200':
         for i in range(256):
             copyTo(source_font, i, base_font, i, source_dims, dims, scale_x)
@@ -185,11 +187,11 @@ for font_name in FONTS:
 
 FontMetrics.to_font(base_font, dims)
 
-base_font.generate(f'dist/{sys.argv[2]}.ttf')
+base_font.generate(f'{sys.argv[2]}')
 base_font.close()
 
-font = fontforge.open(f'dist/{sys.argv[2]}.ttf')
+font = fontforge.open(f'{sys.argv[2]}')
 FontMetrics.to_font(font, dims)
 font.close()
 
-print(f"\x1b[32m! Wrote combined font to '{sys.argv[2]}.ttf' ({sys.argv[2]})\x1b[0m")
+print(f"\x1b[32m! Wrote combined font to '{sys.argv[2]}' ({sys.argv[3]})\x1b[0m")

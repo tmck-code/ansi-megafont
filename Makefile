@@ -1,18 +1,23 @@
 docker/build:
-	docker build -f ops/Dockerfile -t ghcr.io/tmck-code/ansi-megafont:latest .
+	docker build \
+		-f ops/Dockerfile \
+		-t ghcr.io/tmck-code/ansi-megafont:latest \
+		.
 
 docker/fonts:
 	docker run --rm \
-		-v ${PWD}/patched:/app/patched \
+		-v ${PWD}/fonts:/app/fonts \
 		ghcr.io/tmck-code/ansi-megafont:latest \
 			./ops/remap.sh
 
 docker/forge:
 	docker run --rm \
-		-v ${PWD}/patched:/app/patched \
-		-v ${PWD}/dist:/app/dist \
+		-v ${PWD}/fonts:/app/fonts \
 		ghcr.io/tmck-code/ansi-megafont:latest \
-			bash -c "fontforge -script ./bin/forge.py ./patched/ TopazPlusPlus"
+			fontforge -script ./bin/forge.py \
+				./fonts/remapped/ \
+				./fonts/ANSICombined.ttf \
+				'ANSI Combined'
 
 all: docker/build docker/fonts docker/forge
 

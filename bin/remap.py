@@ -342,8 +342,8 @@ class FontMetrics(NamedTuple):
         font.uwidth               = dims.uwidth
 
 
-def remap_glyph(source_font, new_font, source_code, target_code, glyph_name):
-    for offset in (0, 0xE500):
+def remap_glyph(source_font, new_font, source_code, target_code, glyph_name, offset):
+    for offset in (0, offset):
         if source_code == 0x20:
             space_glyph = source_font['space']
             width = space_glyph.width
@@ -365,24 +365,30 @@ def remap_font(input_font, output_font, encoding):
     source_font = fontforge.open(input_font)
     source_font.encoding = 'UnicodeFull'
 
+    offset = 0
     if encoding == 'CP437':
         mapping = CP437_TO_UNICODE
     else:
         if 'topazplus_a1200' in input_font.lower():
             print('Applying Topaz 1200 mapping...')
             mapping = TOPAZ_1200_MAPPING
+            offset = 0xE100
         elif 'topazplus_a500' in input_font.lower():
             print('Applying Topaz 500 mapping...')
             mapping = TOPAZ_500_MAPPING
+            offset = 0xE000
         elif "mo'soul" in input_font.lower():
             print("Applying Mo'Soul mapping...")
             mapping = MOSOUL_MAPPING
+            offset = 0xE200
         elif 'microknightplus' in input_font.lower():
             print('Applying MicroKnight Plus mapping...')
             mapping = MICROKNIGHTPLUS_MAPPING
+            offset = 0xE300
         elif 'noodle' in input_font.lower():
             print('Applying P0T Noodle mapping...')
             mapping = P0TNOODLE_MAPPING
+            offset = 0xE400
         else:
             raise ValueError(
                 'ISO encoding selected but no font mapping found!'
@@ -458,7 +464,7 @@ def remap_font(input_font, output_font, encoding):
                     f'  Copying 0x{unicode_code:04X} to 0x{from_code:02X} ({glyph_name})...',
                     end='',
                 )
-                remap_glyph(source_font, new_font, unicode_code, from_code, glyph_name)
+                remap_glyph(source_font, new_font, unicode_code, from_code, glyph_name, offset)
             print(' > done')
         except (ValueError, TypeError) as e:
             print(f' \x1b[31m(error: {e})\x1b[0m')
