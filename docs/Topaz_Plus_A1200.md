@@ -1,8 +1,11 @@
-# Topaz Plus A1200 (Base Font)
+# Topaz Plus A1200
 
-> **Unicode Range:** U+0000 - U+00FF (Standard positions)
+> **Unicode Range:** U+E300 - U+E3FF
+>
+> Enhanced Amiga 1200 Topaz font
 
-<table class="font-table" style="width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 11px;">
+
+<table class="font-table">
 <thead>
 <tr>
 <th></th>
@@ -27,311 +30,307 @@
 <tbody>
 <tr>
 <td><strong>0</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0000.png" alt=""><br>NUL<br><code>U+0000</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0001.png" alt=""><br>SOH<br><code>U+0001</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0002.png" alt=""><br>STX<br><code>U+0002</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0003.png" alt=""><br>ETX<br><code>U+0003</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0004.png" alt=""><br>EOT<br><code>U+0004</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0005.png" alt=""><br>ENQ<br><code>U+0005</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0006.png" alt=""><br>ACK<br><code>U+0006</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0007.png" alt=""><br>BEL<br><code>U+0007</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0008.png" alt=""><br>BS<br><code>U+0008</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0009.png" alt=""><br>HT<br><code>U+0009</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+000A.png" alt=""><br>LF<br><code>U+000A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+000B.png" alt=""><br>VT<br><code>U+000B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+000C.png" alt=""><br>FF<br><code>U+000C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+000D.png" alt=""><br>CR<br><code>U+000D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+000E.png" alt=""><br>SO<br><code>U+000E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+000F.png" alt=""><br>SI<br><code>U+000F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E300.png" alt=""><br>NUL<br><code>U+E300</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E301.png" alt=""><br>SOH<br><code>U+E301</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E302.png" alt=""><br>STX<br><code>U+E302</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E303.png" alt=""><br>ETX<br><code>U+E303</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E304.png" alt=""><br>EOT<br><code>U+E304</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E305.png" alt=""><br>ENQ<br><code>U+E305</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E306.png" alt=""><br>ACK<br><code>U+E306</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E307.png" alt=""><br>BEL<br><code>U+E307</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E308.png" alt=""><br>BS<br><code>U+E308</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E309.png" alt=""><br>HT<br><code>U+E309</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E30A.png" alt=""><br>LF<br><code>U+E30A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E30B.png" alt=""><br>VT<br><code>U+E30B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E30C.png" alt=""><br>FF<br><code>U+E30C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E30D.png" alt=""><br>CR<br><code>U+E30D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E30E.png" alt=""><br>SO<br><code>U+E30E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E30F.png" alt=""><br>SI<br><code>U+E30F</code></td>
 </tr>
 <tr>
 <td><strong>1</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0010.png" alt=""><br>DLE<br><code>U+0010</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0011.png" alt=""><br>DC1<br><code>U+0011</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0012.png" alt=""><br>DC2<br><code>U+0012</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0013.png" alt=""><br>DC3<br><code>U+0013</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0014.png" alt=""><br>DC4<br><code>U+0014</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0015.png" alt=""><br>NAK<br><code>U+0015</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0016.png" alt=""><br>SYN<br><code>U+0016</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0017.png" alt=""><br>ETB<br><code>U+0017</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0018.png" alt=""><br>CAN<br><code>U+0018</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0019.png" alt=""><br>EM<br><code>U+0019</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+001A.png" alt=""><br>SUB<br><code>U+001A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+001B.png" alt=""><br>ESC<br><code>U+001B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+001C.png" alt=""><br>FS<br><code>U+001C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+001D.png" alt=""><br>GS<br><code>U+001D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+001E.png" alt=""><br>RS<br><code>U+001E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+001F.png" alt=""><br>US<br><code>U+001F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E310.png" alt=""><br>DLE<br><code>U+E310</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E311.png" alt=""><br>DC1<br><code>U+E311</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E312.png" alt=""><br>DC2<br><code>U+E312</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E313.png" alt=""><br>DC3<br><code>U+E313</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E314.png" alt=""><br>DC4<br><code>U+E314</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E315.png" alt=""><br>NAK<br><code>U+E315</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E316.png" alt=""><br>SYN<br><code>U+E316</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E317.png" alt=""><br>ETB<br><code>U+E317</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E318.png" alt=""><br>CAN<br><code>U+E318</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E319.png" alt=""><br>EM<br><code>U+E319</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E31A.png" alt=""><br>SUB<br><code>U+E31A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E31B.png" alt=""><br>ESC<br><code>U+E31B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E31C.png" alt=""><br>FS<br><code>U+E31C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E31D.png" alt=""><br>GS<br><code>U+E31D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E31E.png" alt=""><br>RS<br><code>U+E31E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E31F.png" alt=""><br>US<br><code>U+E31F</code></td>
 </tr>
 <tr>
 <td><strong>2</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0020.png" alt=""><br>SP<br><code>U+0020</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0021.png" alt=""><br>!<br><code>U+0021</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0022.png" alt=""><br>"<br><code>U+0022</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0023.png" alt=""><br>#<br><code>U+0023</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0024.png" alt=""><br>$<br><code>U+0024</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0025.png" alt=""><br>%<br><code>U+0025</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0026.png" alt=""><br>&<br><code>U+0026</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0027.png" alt=""><br>'<br><code>U+0027</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0028.png" alt=""><br>(<br><code>U+0028</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0029.png" alt=""><br>)<br><code>U+0029</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+002A.png" alt=""><br>*<br><code>U+002A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+002B.png" alt=""><br>+<br><code>U+002B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+002C.png" alt=""><br>,<br><code>U+002C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+002D.png" alt=""><br>-<br><code>U+002D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+002E.png" alt=""><br>.<br><code>U+002E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+002F.png" alt=""><br>/<br><code>U+002F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E320.png" alt=""><br>SP<br><code>U+E320</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E321.png" alt=""><br>!<br><code>U+E321</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E322.png" alt=""><br>"<br><code>U+E322</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E323.png" alt=""><br>#<br><code>U+E323</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E324.png" alt=""><br>$<br><code>U+E324</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E325.png" alt=""><br>%<br><code>U+E325</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E326.png" alt=""><br>&<br><code>U+E326</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E327.png" alt=""><br>'<br><code>U+E327</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E328.png" alt=""><br>(<br><code>U+E328</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E329.png" alt=""><br>)<br><code>U+E329</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E32A.png" alt=""><br>*<br><code>U+E32A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E32B.png" alt=""><br>+<br><code>U+E32B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E32C.png" alt=""><br>,<br><code>U+E32C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E32D.png" alt=""><br>-<br><code>U+E32D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E32E.png" alt=""><br>.<br><code>U+E32E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E32F.png" alt=""><br>/<br><code>U+E32F</code></td>
 </tr>
 <tr>
 <td><strong>3</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0030.png" alt=""><br>0<br><code>U+0030</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0031.png" alt=""><br>1<br><code>U+0031</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0032.png" alt=""><br>2<br><code>U+0032</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0033.png" alt=""><br>3<br><code>U+0033</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0034.png" alt=""><br>4<br><code>U+0034</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0035.png" alt=""><br>5<br><code>U+0035</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0036.png" alt=""><br>6<br><code>U+0036</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0037.png" alt=""><br>7<br><code>U+0037</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0038.png" alt=""><br>8<br><code>U+0038</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0039.png" alt=""><br>9<br><code>U+0039</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+003A.png" alt=""><br>:<br><code>U+003A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+003B.png" alt=""><br>;<br><code>U+003B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+003C.png" alt=""><br><<br><code>U+003C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+003D.png" alt=""><br>=<br><code>U+003D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+003E.png" alt=""><br>><br><code>U+003E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+003F.png" alt=""><br>?<br><code>U+003F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E330.png" alt=""><br>0<br><code>U+E330</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E331.png" alt=""><br>1<br><code>U+E331</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E332.png" alt=""><br>2<br><code>U+E332</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E333.png" alt=""><br>3<br><code>U+E333</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E334.png" alt=""><br>4<br><code>U+E334</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E335.png" alt=""><br>5<br><code>U+E335</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E336.png" alt=""><br>6<br><code>U+E336</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E337.png" alt=""><br>7<br><code>U+E337</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E338.png" alt=""><br>8<br><code>U+E338</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E339.png" alt=""><br>9<br><code>U+E339</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E33A.png" alt=""><br>:<br><code>U+E33A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E33B.png" alt=""><br>;<br><code>U+E33B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E33C.png" alt=""><br><<br><code>U+E33C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E33D.png" alt=""><br>=<br><code>U+E33D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E33E.png" alt=""><br>><br><code>U+E33E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E33F.png" alt=""><br>?<br><code>U+E33F</code></td>
 </tr>
 <tr>
 <td><strong>4</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0040.png" alt=""><br>@<br><code>U+0040</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0041.png" alt=""><br>A<br><code>U+0041</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0042.png" alt=""><br>B<br><code>U+0042</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0043.png" alt=""><br>C<br><code>U+0043</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0044.png" alt=""><br>D<br><code>U+0044</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0045.png" alt=""><br>E<br><code>U+0045</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0046.png" alt=""><br>F<br><code>U+0046</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0047.png" alt=""><br>G<br><code>U+0047</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0048.png" alt=""><br>H<br><code>U+0048</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0049.png" alt=""><br>I<br><code>U+0049</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+004A.png" alt=""><br>J<br><code>U+004A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+004B.png" alt=""><br>K<br><code>U+004B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+004C.png" alt=""><br>L<br><code>U+004C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+004D.png" alt=""><br>M<br><code>U+004D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+004E.png" alt=""><br>N<br><code>U+004E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+004F.png" alt=""><br>O<br><code>U+004F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E340.png" alt=""><br>@<br><code>U+E340</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E341.png" alt=""><br>A<br><code>U+E341</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E342.png" alt=""><br>B<br><code>U+E342</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E343.png" alt=""><br>C<br><code>U+E343</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E344.png" alt=""><br>D<br><code>U+E344</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E345.png" alt=""><br>E<br><code>U+E345</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E346.png" alt=""><br>F<br><code>U+E346</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E347.png" alt=""><br>G<br><code>U+E347</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E348.png" alt=""><br>H<br><code>U+E348</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E349.png" alt=""><br>I<br><code>U+E349</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E34A.png" alt=""><br>J<br><code>U+E34A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E34B.png" alt=""><br>K<br><code>U+E34B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E34C.png" alt=""><br>L<br><code>U+E34C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E34D.png" alt=""><br>M<br><code>U+E34D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E34E.png" alt=""><br>N<br><code>U+E34E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E34F.png" alt=""><br>O<br><code>U+E34F</code></td>
 </tr>
 <tr>
 <td><strong>5</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0050.png" alt=""><br>P<br><code>U+0050</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0051.png" alt=""><br>Q<br><code>U+0051</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0052.png" alt=""><br>R<br><code>U+0052</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0053.png" alt=""><br>S<br><code>U+0053</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0054.png" alt=""><br>T<br><code>U+0054</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0055.png" alt=""><br>U<br><code>U+0055</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0056.png" alt=""><br>V<br><code>U+0056</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0057.png" alt=""><br>W<br><code>U+0057</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0058.png" alt=""><br>X<br><code>U+0058</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0059.png" alt=""><br>Y<br><code>U+0059</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+005A.png" alt=""><br>Z<br><code>U+005A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+005B.png" alt=""><br>[<br><code>U+005B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+005C.png" alt=""><br>\\<br><code>U+005C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+005D.png" alt=""><br>]<br><code>U+005D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+005E.png" alt=""><br>^<br><code>U+005E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+005F.png" alt=""><br>_<br><code>U+005F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E350.png" alt=""><br>P<br><code>U+E350</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E351.png" alt=""><br>Q<br><code>U+E351</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E352.png" alt=""><br>R<br><code>U+E352</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E353.png" alt=""><br>S<br><code>U+E353</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E354.png" alt=""><br>T<br><code>U+E354</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E355.png" alt=""><br>U<br><code>U+E355</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E356.png" alt=""><br>V<br><code>U+E356</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E357.png" alt=""><br>W<br><code>U+E357</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E358.png" alt=""><br>X<br><code>U+E358</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E359.png" alt=""><br>Y<br><code>U+E359</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E35A.png" alt=""><br>Z<br><code>U+E35A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E35B.png" alt=""><br>[<br><code>U+E35B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E35C.png" alt=""><br>\<br><code>U+E35C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E35D.png" alt=""><br>]<br><code>U+E35D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E35E.png" alt=""><br>^<br><code>U+E35E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E35F.png" alt=""><br>_<br><code>U+E35F</code></td>
 </tr>
 <tr>
 <td><strong>6</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0060.png" alt=""><br>\<code><br></code>U+0060`</td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0061.png" alt=""><br>a<br><code>U+0061</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0062.png" alt=""><br>b<br><code>U+0062</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0063.png" alt=""><br>c<br><code>U+0063</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0064.png" alt=""><br>d<br><code>U+0064</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0065.png" alt=""><br>e<br><code>U+0065</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0066.png" alt=""><br>f<br><code>U+0066</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0067.png" alt=""><br>g<br><code>U+0067</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0068.png" alt=""><br>h<br><code>U+0068</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0069.png" alt=""><br>i<br><code>U+0069</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+006A.png" alt=""><br>j<br><code>U+006A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+006B.png" alt=""><br>k<br><code>U+006B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+006C.png" alt=""><br>l<br><code>U+006C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+006D.png" alt=""><br>m<br><code>U+006D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+006E.png" alt=""><br>n<br><code>U+006E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+006F.png" alt=""><br>o<br><code>U+006F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E360.png" alt=""><br>`<br><code>U+E360</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E361.png" alt=""><br>a<br><code>U+E361</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E362.png" alt=""><br>b<br><code>U+E362</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E363.png" alt=""><br>c<br><code>U+E363</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E364.png" alt=""><br>d<br><code>U+E364</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E365.png" alt=""><br>e<br><code>U+E365</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E366.png" alt=""><br>f<br><code>U+E366</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E367.png" alt=""><br>g<br><code>U+E367</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E368.png" alt=""><br>h<br><code>U+E368</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E369.png" alt=""><br>i<br><code>U+E369</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E36A.png" alt=""><br>j<br><code>U+E36A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E36B.png" alt=""><br>k<br><code>U+E36B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E36C.png" alt=""><br>l<br><code>U+E36C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E36D.png" alt=""><br>m<br><code>U+E36D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E36E.png" alt=""><br>n<br><code>U+E36E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E36F.png" alt=""><br>o<br><code>U+E36F</code></td>
 </tr>
 <tr>
 <td><strong>7</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0070.png" alt=""><br>p<br><code>U+0070</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0071.png" alt=""><br>q<br><code>U+0071</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0072.png" alt=""><br>r<br><code>U+0072</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0073.png" alt=""><br>s<br><code>U+0073</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0074.png" alt=""><br>t<br><code>U+0074</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0075.png" alt=""><br>u<br><code>U+0075</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0076.png" alt=""><br>v<br><code>U+0076</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0077.png" alt=""><br>w<br><code>U+0077</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0078.png" alt=""><br>x<br><code>U+0078</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0079.png" alt=""><br>y<br><code>U+0079</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+007A.png" alt=""><br>z<br><code>U+007A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+007B.png" alt=""><br>{<br><code>U+007B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+007C.png" alt=""><br>\</td>
-<td><br><code>U+007C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+007D.png" alt=""><br>}<br><code>U+007D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+007E.png" alt=""><br>~<br><code>U+007E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+007F.png" alt=""><br>DEL<br><code>U+007F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E370.png" alt=""><br>p<br><code>U+E370</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E371.png" alt=""><br>q<br><code>U+E371</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E372.png" alt=""><br>r<br><code>U+E372</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E373.png" alt=""><br>s<br><code>U+E373</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E374.png" alt=""><br>t<br><code>U+E374</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E375.png" alt=""><br>u<br><code>U+E375</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E376.png" alt=""><br>v<br><code>U+E376</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E377.png" alt=""><br>w<br><code>U+E377</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E378.png" alt=""><br>x<br><code>U+E378</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E379.png" alt=""><br>y<br><code>U+E379</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E37A.png" alt=""><br>z<br><code>U+E37A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E37B.png" alt=""><br>{<br><code>U+E37B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E37C.png" alt=""><br>|<br><code>U+E37C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E37D.png" alt=""><br>}<br><code>U+E37D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E37E.png" alt=""><br>~<br><code>U+E37E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E37F.png" alt=""><br>DEL<br><code>U+E37F</code></td>
 </tr>
 <tr>
 <td><strong>8</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0080.png" alt=""><br><br><code>U+0080</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0081.png" alt=""><br><br><code>U+0081</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0082.png" alt=""><br><br><code>U+0082</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0083.png" alt=""><br><br><code>U+0083</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0084.png" alt=""><br><br><code>U+0084</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0085.png" alt=""><br><br><code>U+0085</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0086.png" alt=""><br><br><code>U+0086</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0087.png" alt=""><br><br><code>U+0087</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0088.png" alt=""><br><br><code>U+0088</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0089.png" alt=""><br><br><code>U+0089</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+008A.png" alt=""><br><br><code>U+008A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+008B.png" alt=""><br><br><code>U+008B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+008C.png" alt=""><br><br><code>U+008C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+008D.png" alt=""><br><br><code>U+008D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+008E.png" alt=""><br><br><code>U+008E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+008F.png" alt=""><br><br><code>U+008F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E380.png" alt=""><br><br><code>U+E380</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E381.png" alt=""><br><br><code>U+E381</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E382.png" alt=""><br><br><code>U+E382</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E383.png" alt=""><br><br><code>U+E383</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E384.png" alt=""><br><br><code>U+E384</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E385.png" alt=""><br><br><code>U+E385</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E386.png" alt=""><br><br><code>U+E386</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E387.png" alt=""><br><br><code>U+E387</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E388.png" alt=""><br><br><code>U+E388</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E389.png" alt=""><br><br><code>U+E389</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E38A.png" alt=""><br><br><code>U+E38A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E38B.png" alt=""><br><br><code>U+E38B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E38C.png" alt=""><br><br><code>U+E38C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E38D.png" alt=""><br><br><code>U+E38D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E38E.png" alt=""><br><br><code>U+E38E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E38F.png" alt=""><br><br><code>U+E38F</code></td>
 </tr>
 <tr>
 <td><strong>9</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0090.png" alt=""><br><br><code>U+0090</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0091.png" alt=""><br><br><code>U+0091</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0092.png" alt=""><br><br><code>U+0092</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0093.png" alt=""><br><br><code>U+0093</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0094.png" alt=""><br><br><code>U+0094</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0095.png" alt=""><br><br><code>U+0095</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0096.png" alt=""><br><br><code>U+0096</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0097.png" alt=""><br><br><code>U+0097</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0098.png" alt=""><br><br><code>U+0098</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+0099.png" alt=""><br><br><code>U+0099</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+009A.png" alt=""><br><br><code>U+009A</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+009B.png" alt=""><br><br><code>U+009B</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+009C.png" alt=""><br><br><code>U+009C</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+009D.png" alt=""><br><br><code>U+009D</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+009E.png" alt=""><br><br><code>U+009E</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+009F.png" alt=""><br><br><code>U+009F</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E390.png" alt=""><br><br><code>U+E390</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E391.png" alt=""><br><br><code>U+E391</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E392.png" alt=""><br><br><code>U+E392</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E393.png" alt=""><br><br><code>U+E393</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E394.png" alt=""><br><br><code>U+E394</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E395.png" alt=""><br><br><code>U+E395</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E396.png" alt=""><br><br><code>U+E396</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E397.png" alt=""><br><br><code>U+E397</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E398.png" alt=""><br><br><code>U+E398</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E399.png" alt=""><br><br><code>U+E399</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E39A.png" alt=""><br><br><code>U+E39A</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E39B.png" alt=""><br><br><code>U+E39B</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E39C.png" alt=""><br><br><code>U+E39C</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E39D.png" alt=""><br><br><code>U+E39D</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E39E.png" alt=""><br><br><code>U+E39E</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E39F.png" alt=""><br><br><code>U+E39F</code></td>
 </tr>
 <tr>
 <td><strong>A</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A0.png" alt=""><br><br><code>U+00A0</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A1.png" alt=""><br><br><code>U+00A1</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A2.png" alt=""><br><br><code>U+00A2</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A3.png" alt=""><br><br><code>U+00A3</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A4.png" alt=""><br><br><code>U+00A4</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A5.png" alt=""><br><br><code>U+00A5</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A6.png" alt=""><br><br><code>U+00A6</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A7.png" alt=""><br><br><code>U+00A7</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A8.png" alt=""><br><br><code>U+00A8</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00A9.png" alt=""><br><br><code>U+00A9</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00AA.png" alt=""><br><br><code>U+00AA</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00AB.png" alt=""><br><br><code>U+00AB</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00AC.png" alt=""><br><br><code>U+00AC</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00AD.png" alt=""><br><br><code>U+00AD</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00AE.png" alt=""><br><br><code>U+00AE</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00AF.png" alt=""><br><br><code>U+00AF</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A0.png" alt=""><br><br><code>U+E3A0</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A1.png" alt=""><br>¡<br><code>U+E3A1</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A2.png" alt=""><br>¢<br><code>U+E3A2</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A3.png" alt=""><br>£<br><code>U+E3A3</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A4.png" alt=""><br>¤<br><code>U+E3A4</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A5.png" alt=""><br>¥<br><code>U+E3A5</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A6.png" alt=""><br>¦<br><code>U+E3A6</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A7.png" alt=""><br>§<br><code>U+E3A7</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A8.png" alt=""><br>¨<br><code>U+E3A8</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3A9.png" alt=""><br>©<br><code>U+E3A9</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3AA.png" alt=""><br>ª<br><code>U+E3AA</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3AB.png" alt=""><br>«<br><code>U+E3AB</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3AC.png" alt=""><br>¬<br><code>U+E3AC</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3AD.png" alt=""><br><br><code>U+E3AD</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3AE.png" alt=""><br>®<br><code>U+E3AE</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3AF.png" alt=""><br>¯<br><code>U+E3AF</code></td>
 </tr>
 <tr>
 <td><strong>B</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B0.png" alt=""><br><br><code>U+00B0</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B1.png" alt=""><br><br><code>U+00B1</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B2.png" alt=""><br><br><code>U+00B2</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B3.png" alt=""><br><br><code>U+00B3</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B4.png" alt=""><br><br><code>U+00B4</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B5.png" alt=""><br><br><code>U+00B5</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B6.png" alt=""><br><br><code>U+00B6</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B7.png" alt=""><br><br><code>U+00B7</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B8.png" alt=""><br><br><code>U+00B8</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00B9.png" alt=""><br><br><code>U+00B9</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00BA.png" alt=""><br><br><code>U+00BA</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00BB.png" alt=""><br><br><code>U+00BB</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00BC.png" alt=""><br><br><code>U+00BC</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00BD.png" alt=""><br><br><code>U+00BD</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00BE.png" alt=""><br><br><code>U+00BE</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00BF.png" alt=""><br><br><code>U+00BF</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B0.png" alt=""><br>°<br><code>U+E3B0</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B1.png" alt=""><br>±<br><code>U+E3B1</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B2.png" alt=""><br>²<br><code>U+E3B2</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B3.png" alt=""><br>³<br><code>U+E3B3</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B4.png" alt=""><br>´<br><code>U+E3B4</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B5.png" alt=""><br>µ<br><code>U+E3B5</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B6.png" alt=""><br>¶<br><code>U+E3B6</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B7.png" alt=""><br>·<br><code>U+E3B7</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B8.png" alt=""><br>¸<br><code>U+E3B8</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3B9.png" alt=""><br>¹<br><code>U+E3B9</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3BA.png" alt=""><br>º<br><code>U+E3BA</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3BB.png" alt=""><br>»<br><code>U+E3BB</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3BC.png" alt=""><br>¼<br><code>U+E3BC</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3BD.png" alt=""><br>½<br><code>U+E3BD</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3BE.png" alt=""><br>¾<br><code>U+E3BE</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3BF.png" alt=""><br>¿<br><code>U+E3BF</code></td>
 </tr>
 <tr>
 <td><strong>C</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C0.png" alt=""><br><br><code>U+00C0</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C1.png" alt=""><br><br><code>U+00C1</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C2.png" alt=""><br><br><code>U+00C2</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C3.png" alt=""><br><br><code>U+00C3</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C4.png" alt=""><br><br><code>U+00C4</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C5.png" alt=""><br><br><code>U+00C5</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C6.png" alt=""><br><br><code>U+00C6</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C7.png" alt=""><br><br><code>U+00C7</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C8.png" alt=""><br><br><code>U+00C8</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00C9.png" alt=""><br><br><code>U+00C9</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00CA.png" alt=""><br><br><code>U+00CA</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00CB.png" alt=""><br><br><code>U+00CB</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00CC.png" alt=""><br><br><code>U+00CC</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00CD.png" alt=""><br><br><code>U+00CD</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00CE.png" alt=""><br><br><code>U+00CE</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00CF.png" alt=""><br><br><code>U+00CF</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C0.png" alt=""><br>À<br><code>U+E3C0</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C1.png" alt=""><br>Á<br><code>U+E3C1</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C2.png" alt=""><br>Â<br><code>U+E3C2</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C3.png" alt=""><br>Ã<br><code>U+E3C3</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C4.png" alt=""><br>Ä<br><code>U+E3C4</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C5.png" alt=""><br>Å<br><code>U+E3C5</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C6.png" alt=""><br>Æ<br><code>U+E3C6</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C7.png" alt=""><br>Ç<br><code>U+E3C7</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C8.png" alt=""><br>È<br><code>U+E3C8</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3C9.png" alt=""><br>É<br><code>U+E3C9</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3CA.png" alt=""><br>Ê<br><code>U+E3CA</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3CB.png" alt=""><br>Ë<br><code>U+E3CB</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3CC.png" alt=""><br>Ì<br><code>U+E3CC</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3CD.png" alt=""><br>Í<br><code>U+E3CD</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3CE.png" alt=""><br>Î<br><code>U+E3CE</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3CF.png" alt=""><br>Ï<br><code>U+E3CF</code></td>
 </tr>
 <tr>
 <td><strong>D</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D0.png" alt=""><br><br><code>U+00D0</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D1.png" alt=""><br><br><code>U+00D1</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D2.png" alt=""><br><br><code>U+00D2</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D3.png" alt=""><br><br><code>U+00D3</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D4.png" alt=""><br><br><code>U+00D4</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D5.png" alt=""><br><br><code>U+00D5</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D6.png" alt=""><br><br><code>U+00D6</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D7.png" alt=""><br><br><code>U+00D7</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D8.png" alt=""><br><br><code>U+00D8</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00D9.png" alt=""><br><br><code>U+00D9</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00DA.png" alt=""><br><br><code>U+00DA</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00DB.png" alt=""><br><br><code>U+00DB</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00DC.png" alt=""><br><br><code>U+00DC</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00DD.png" alt=""><br><br><code>U+00DD</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00DE.png" alt=""><br><br><code>U+00DE</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00DF.png" alt=""><br><br><code>U+00DF</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D0.png" alt=""><br>Ð<br><code>U+E3D0</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D1.png" alt=""><br>Ñ<br><code>U+E3D1</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D2.png" alt=""><br>Ò<br><code>U+E3D2</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D3.png" alt=""><br>Ó<br><code>U+E3D3</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D4.png" alt=""><br>Ô<br><code>U+E3D4</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D5.png" alt=""><br>Õ<br><code>U+E3D5</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D6.png" alt=""><br>Ö<br><code>U+E3D6</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D7.png" alt=""><br>×<br><code>U+E3D7</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D8.png" alt=""><br>Ø<br><code>U+E3D8</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3D9.png" alt=""><br>Ù<br><code>U+E3D9</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3DA.png" alt=""><br>Ú<br><code>U+E3DA</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3DB.png" alt=""><br>Û<br><code>U+E3DB</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3DC.png" alt=""><br>Ü<br><code>U+E3DC</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3DD.png" alt=""><br>Ý<br><code>U+E3DD</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3DE.png" alt=""><br>Þ<br><code>U+E3DE</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3DF.png" alt=""><br>ß<br><code>U+E3DF</code></td>
 </tr>
 <tr>
 <td><strong>E</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E0.png" alt=""><br><br><code>U+00E0</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E1.png" alt=""><br><br><code>U+00E1</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E2.png" alt=""><br><br><code>U+00E2</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E3.png" alt=""><br><br><code>U+00E3</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E4.png" alt=""><br><br><code>U+00E4</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E5.png" alt=""><br><br><code>U+00E5</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E6.png" alt=""><br><br><code>U+00E6</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E7.png" alt=""><br><br><code>U+00E7</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E8.png" alt=""><br><br><code>U+00E8</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00E9.png" alt=""><br><br><code>U+00E9</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00EA.png" alt=""><br><br><code>U+00EA</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00EB.png" alt=""><br><br><code>U+00EB</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00EC.png" alt=""><br><br><code>U+00EC</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00ED.png" alt=""><br><br><code>U+00ED</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00EE.png" alt=""><br><br><code>U+00EE</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00EF.png" alt=""><br><br><code>U+00EF</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E0.png" alt=""><br>à<br><code>U+E3E0</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E1.png" alt=""><br>á<br><code>U+E3E1</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E2.png" alt=""><br>â<br><code>U+E3E2</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E3.png" alt=""><br>ã<br><code>U+E3E3</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E4.png" alt=""><br>ä<br><code>U+E3E4</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E5.png" alt=""><br>å<br><code>U+E3E5</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E6.png" alt=""><br>æ<br><code>U+E3E6</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E7.png" alt=""><br>ç<br><code>U+E3E7</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E8.png" alt=""><br>è<br><code>U+E3E8</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3E9.png" alt=""><br>é<br><code>U+E3E9</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3EA.png" alt=""><br>ê<br><code>U+E3EA</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3EB.png" alt=""><br>ë<br><code>U+E3EB</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3EC.png" alt=""><br>ì<br><code>U+E3EC</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3ED.png" alt=""><br>í<br><code>U+E3ED</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3EE.png" alt=""><br>î<br><code>U+E3EE</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3EF.png" alt=""><br>ï<br><code>U+E3EF</code></td>
 </tr>
 <tr>
 <td><strong>F</strong></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F0.png" alt=""><br><br><code>U+00F0</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F1.png" alt=""><br><br><code>U+00F1</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F2.png" alt=""><br><br><code>U+00F2</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F3.png" alt=""><br><br><code>U+00F3</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F4.png" alt=""><br><br><code>U+00F4</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F5.png" alt=""><br><br><code>U+00F5</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F6.png" alt=""><br><br><code>U+00F6</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F7.png" alt=""><br><br><code>U+00F7</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F8.png" alt=""><br><br><code>U+00F8</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00F9.png" alt=""><br><br><code>U+00F9</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00FA.png" alt=""><br><br><code>U+00FA</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00FB.png" alt=""><br><br><code>U+00FB</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00FC.png" alt=""><br><br><code>U+00FC</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00FD.png" alt=""><br><br><code>U+00FD</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00FE.png" alt=""><br><br><code>U+00FE</code></td>
-<td><img src="/docs/img/Topaz_Plus_A1200_(Base_Font)/U+00FF.png" alt=""><br><br><code>U+00FF</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F0.png" alt=""><br>ð<br><code>U+E3F0</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F1.png" alt=""><br>ñ<br><code>U+E3F1</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F2.png" alt=""><br>ò<br><code>U+E3F2</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F3.png" alt=""><br>ó<br><code>U+E3F3</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F4.png" alt=""><br>ô<br><code>U+E3F4</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F5.png" alt=""><br>õ<br><code>U+E3F5</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F6.png" alt=""><br>ö<br><code>U+E3F6</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F7.png" alt=""><br>÷<br><code>U+E3F7</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F8.png" alt=""><br>ø<br><code>U+E3F8</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3F9.png" alt=""><br>ù<br><code>U+E3F9</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3FA.png" alt=""><br>ú<br><code>U+E3FA</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3FB.png" alt=""><br>û<br><code>U+E3FB</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3FC.png" alt=""><br>ü<br><code>U+E3FC</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3FD.png" alt=""><br>ý<br><code>U+E3FD</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3FE.png" alt=""><br>þ<br><code>U+E3FE</code></td>
+<td><img src="/docs/img/Topaz_Plus_A1200/U+E3FF.png" alt=""><br>ÿ<br><code>U+E3FF</code></td>
 </tr>
 </tbody>
 </table>
-
-
-*Also available at U+E100-E1FF*
