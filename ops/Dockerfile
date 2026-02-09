@@ -3,9 +3,15 @@ FROM python:3.14-slim
 RUN apt update && \
     apt upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
-        fontforge git wget unzip && \
+        fontforge git wget unzip tree && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
+
+ARG UID
+ARG GID
+
+RUN addgroup --gid $GID user \
+ && adduser --uid $UID user --ingroup user
 
 WORKDIR /fonts
 RUN git clone https://github.com/rewtnull/amigafonts.git ./amigafonts \

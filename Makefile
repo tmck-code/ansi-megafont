@@ -1,5 +1,7 @@
 docker/build:
 	docker build \
+		--build-arg UID=$(shell id -u) \
+		--build-arg GID=$(shell id -g) \
 		-f ops/Dockerfile \
 		-t ghcr.io/tmck-code/ansi-megafont:latest \
 		.
@@ -13,6 +15,7 @@ docker/fonts:
 docker/forge:
 	docker run --rm \
 		-v ${PWD}/fonts:/app/fonts \
+		-v ${PWD}/bin:/app/bin \
 		ghcr.io/tmck-code/ansi-megafont:latest \
 			fontforge -script ./bin/forge.py \
 				./fonts/remapped/ \
