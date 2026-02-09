@@ -358,6 +358,19 @@ def remap_glyph(source_font, new_font, source_code, target_code, glyph_name, off
         new_font.paste()
     return True
 
+OFFSETS = {
+    # amiga fonts
+    'Topaz_a500_v1.0':      {'offset': 0xE000, 'mapping': TOPAZ_500_MAPPING},
+    'TopazPlus_a500_v1.0':  {'offset': 0xE100, 'mapping': TOPAZ_500_MAPPING},
+    'Topaz_a1200_v1.0':     {'offset': 0xE200, 'mapping': TOPAZ_1200_MAPPING},
+    'TopazPlus_a1200_v1.0': {'offset': 0xE300, 'mapping': TOPAZ_1200_MAPPING},
+    'MicroKnight_v1.0':     {'offset': 0xE400, 'mapping': MICROKNIGHTPLUS_MAPPING},
+    'MicroKnightPlus_v1.0': {'offset': 0xE500, 'mapping': MICROKNIGHTPLUS_MAPPING},
+    "mO'sOul_v1.0":         {'offset': 0xE600, 'mapping': MOSOUL_MAPPING},
+    'P0T-NOoDLE_v1.0':      {'offset': 0xE700, 'mapping': P0TNOODLE_MAPPING},
+    # ibm fonts
+    'Ac437_IBM_VGA_9x16':   {'offset': 0xE800, 'mapping': CP437_TO_UNICODE},
+}
 
 def remap_font(input_font, output_font, encoding):
     'Create a new font with Unicode encoding from a CP436/ISO-8859-1 font.'
@@ -366,33 +379,14 @@ def remap_font(input_font, output_font, encoding):
     source_font.encoding = 'UnicodeFull'
 
     offset = 0
-    if encoding == 'CP437':
-        mapping = CP437_TO_UNICODE
+    for f, offset in OFFSETS.items():
+        if f in input_font:
+            mapping = OFFSETS[f]['mapping']
+            offset = OFFSETS[f]['offset']
+            print(f'Applying {f} mapping...')
+            break
     else:
-        if 'topazplus_a1200' in input_font.lower():
-            print('Applying Topaz 1200 mapping...')
-            mapping = TOPAZ_1200_MAPPING
-            offset = 0xE100
-        elif 'topazplus_a500' in input_font.lower():
-            print('Applying Topaz 500 mapping...')
-            mapping = TOPAZ_500_MAPPING
-            offset = 0xE000
-        elif "mo'soul" in input_font.lower():
-            print("Applying Mo'Soul mapping...")
-            mapping = MOSOUL_MAPPING
-            offset = 0xE200
-        elif 'microknightplus' in input_font.lower():
-            print('Applying MicroKnight Plus mapping...')
-            mapping = MICROKNIGHTPLUS_MAPPING
-            offset = 0xE300
-        elif 'noodle' in input_font.lower():
-            print('Applying P0T Noodle mapping...')
-            mapping = P0TNOODLE_MAPPING
-            offset = 0xE400
-        else:
-            raise ValueError(
-                'ISO encoding selected but no font mapping found!'
-            )
+        raise ValueError('No font mapping found!')
 
     dims = FontMetrics.from_font(source_font)
 

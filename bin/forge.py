@@ -1,18 +1,12 @@
 #!/usr/bin/env python3
 
 from glob import glob
+import os
 import sys
 from typing import NamedTuple
+
 import fontforge
 
-FONTS = (
-    'topazplus_a1200',
-    'noodle',
-    'microknightplus',
-    'mosoul',
-    'topazplus_a500',
-    'ibm',
-)
 
 class FontMetrics(NamedTuple):
     em_size:         int
@@ -58,25 +52,30 @@ class FontMetrics(NamedTuple):
         font.os2_windescent       = dims.os2_windescent
         font.os2_use_typo_metrics = True
 
+
+OFFSETS = {
+    # amiga fonts
+    'Topaz_a500_v1.0.patched.ttf':      0xE000,
+    'TopazPlus_a500_v1.0.patched.ttf':  0xE100,
+    'Topaz_a1200_v1.0.patched.ttf':     0xE200,
+    'TopazPlus_a1200_v1.0.patched.ttf': 0xE300,
+    'MicroKnight_v1.0.patched.ttf':     0xE400,
+    'MicroKnightPlus_v1.0.patched.ttf': 0xE500,
+    "mO'sOul_v1.0.patched.ttf":         0xE600,
+    'P0T-NOoDLE_v1.0.patched.ttf':      0xE700,
+    # ibm fonts
+    'Ac437_IBM_VGA_9x16.patched.ttf':   0xE800,
+}
+
 def find_files(dirpath: str) -> dict[str, dict[str, str | int]]:
     font_paths = {}
 
     for fpath in glob(f'{dirpath}*.ttf'):
-        if 'topazplus' in fpath.lower():
-            if 'a500' in fpath.lower():
-                font_paths['topazplus_a500'] = {'fpath': fpath, 'offset': 0xE000}
-            elif 'a1200' in fpath.lower():
-                font_paths['topazplus_a1200'] = {'fpath': fpath, 'offset': 0xE100}
-        elif 'soul' in fpath.lower():
-            font_paths['mosoul'] = {'fpath': fpath, 'offset': 0xE200}
-        elif 'microknightplus' in fpath.lower():
-            font_paths['microknightplus'] = {'fpath': fpath, 'offset': 0xE300}
-        elif 'noodle' in fpath.lower():
-            font_paths['noodle'] = {'fpath': fpath, 'offset': 0xE400}
-        elif 'ibm' in fpath.lower():
-            font_paths['ibm'] = {'fpath': fpath, 'offset': 0xE500}
+        fname = os.path.basename(fpath)
+        if fname in OFFSETS:
+            font_paths[fname] = {'fpath': fpath, 'offset': OFFSETS[fname]}
         else:
-            raise ValueError(f'Unknown font file: {fpath}')
+            raise ValueError(f'Unknown font file: {fpath}, known fonts: {OFFSETS}')
     return font_paths
 
 
@@ -143,19 +142,20 @@ def copyTo(sourceFont, sourceIdx, targetFont, targetIdx, sourceDims=None, target
 print(f'converting {sys.argv[1]} to {sys.argv[2]}')
 
 fonts = find_files(sys.argv[1])
-base_font = fontforge.open(fonts['topazplus_a1200']['fpath'])
+# base_font = fontforge.open(fonts['topazplus_a1200']['fpath'])
+base_font = fontforge.open(fonts['TopazPlus_a1200_v1.0.patched.ttf']['fpath'])
 base_font.encoding = 'UnicodeFull'
 base_font.fontname = sys.argv[3].replace(' ', '')
 base_font.familyname = sys.argv[3]
 
 dims = FontMetrics.from_font(base_font)
 
-print(f'Using metrics from: {fonts["topazplus_a1200"]["fpath"]}')
+print(f'Using metrics from: {fonts["TopazPlus_a1200_v1.0.patched.ttf"]["fpath"]}')
 print(f'> {dims.em_size=}, {dims.ascent=}, {dims.descent=}, {dims.os2_typoascent=}, {dims.os2_typodescent=}, {dims.os2_typolinegap=}')
 
 print('Included fonts:')
 print('\n'.join([f' - {name}: {info["fpath"]}' for name, info in fonts.items()]))
-for font_name in FONTS:
+for font_name in OFFSETS:
     if font_name not in fonts:
         print(f'skipping missing font: {font_name}')
         continue
@@ -174,7 +174,7 @@ for font_name in FONTS:
             print(f'> calculated horizontal scale factor: {scale_x:.3f}')
     else:
         scale_x = 1.0
-    if font_name == 'topazplus_a1200':
+    if font_name == 'TopazPlus_a1200_v1.0.patched.ttf':
         for i in range(256):
             copyTo(source_font, i, base_font, i, source_dims, dims, scale_x)
 
