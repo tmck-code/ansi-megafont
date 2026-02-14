@@ -18,5 +18,8 @@ RUN git clone https://github.com/rewtnull/amigafonts.git ./amigafonts \
     && wget --progress=dot:mega https://int10h.org/oldschool-pc-fonts/download/oldschool_pc_font_pack_v2.2_linux.zip \
     && unzip -q -d ./ibm oldschool_pc_font_pack_v2.2_linux.zip
 
+RUN python3 -m pip install laser-prynter
+ENV PYTHONPATH=/usr/local/lib/python3.14/site-packages
+
 WORKDIR /app
 COPY . /app
