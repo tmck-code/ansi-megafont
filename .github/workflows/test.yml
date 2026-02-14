@@ -12,6 +12,7 @@ jobs:
         --pull missing
         -u root
         -v ${{ github.workspace }}/fonts:/app/fonts
+        -v ${{ github.workspace }}/bin:/app/bin
         ghcr.io/tmck-code/ansi-megafont:latest
         ./ops/remap.sh
     - name: Forge megafont
