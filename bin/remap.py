@@ -4,12 +4,12 @@ FontForge script to remap CP437/ISO-8859-1 characters from Unicode positions to 
 Usage: fontforge -script bin/remap.py input.ttf output.ttf
 '''
 
-from dataclasses import dataclass
 import json
 import sys
 from typing import NamedTuple
 
 import fontforge
+from laser_prynter.pbar import PBar
 
 # cp437_code: (unicode_code, glyph_name)
 CP437_TO_UNICODE = {
@@ -341,6 +341,12 @@ class FontMetrics(NamedTuple):
         font.upos                 = dims.upos
         font.uwidth               = dims.uwidth
 
+    def __str__(self):
+        s = 'FontMetrics:'
+        for field in self._fields:
+            s += f'\n  {f"{field}:":<16} = {getattr(self, field)}'
+        return s
+
 
 def remap_glyph(source_font, new_font, source_code, target_code, glyph_name, offset):
     for offset in (0, offset):
@@ -374,7 +380,8 @@ OFFSETS = {
 
 def remap_font(input_font, output_font, encoding):
     'Create a new font with Unicode encoding from a CP436/ISO-8859-1 font.'
-    print(f'Opening source font: {input_font}')
+
+    print(f'Remapping: \x1b[93m{input_font}\x1b[0m')
     source_font = fontforge.open(input_font)
     source_font.encoding = 'UnicodeFull'
 
@@ -383,85 +390,82 @@ def remap_font(input_font, output_font, encoding):
         if f in input_font:
             mapping = OFFSETS[f]['mapping']
             offset = OFFSETS[f]['offset']
-            print(f'Applying {f} mapping...')
             break
     else:
         raise ValueError('No font mapping found!')
 
     dims = FontMetrics.from_font(source_font)
 
-    print('Creating new font...')
     new_font = fontforge.font()
 
-    new_font.fontname = source_font.fontname + f'_{encoding}'
-    new_font.familyname = source_font.familyname + f' {encoding}'
-    new_font.fullname = source_font.fullname + f' {encoding}'
+    new_font.fontname = source_font.fontname
+    new_font.familyname = source_font.familyname
+    new_font.fullname = source_font.fullname
     new_font.copyright = source_font.copyright
     new_font.version = source_font.version
     new_font.encoding = 'UnicodeFull'
 
     FontMetrics.to_font(new_font, dims)
-    print(json.dumps(dims._asdict(), indent=2))
-    import pprint
-
-    pprint.pprint(mapping)
+    print(dims, end='\n\n')
 
     # Copy extended characters from Unicode positions to CP437 positions
-    print('Copying characters (0x00-0xFF) from Unicode positions...')
+    print('Remapping characters 0x00-0xFF')
 
     # Group mappings by source to avoid repeated copying of the same glyph
     source_to_targets = {}
-    for from_code in range(0x00, 0xFF + 1):
-        if from_code in mapping:
-            unicode_code, glyph_name = mapping[from_code]
-            if not glyph_name and isinstance(unicode_code, int):
-                glyph_name = f'uni{unicode_code:04X}'
-        else:
-            unicode_code = from_code
-            glyph_name = (
-                source_font[from_code].glyphname
-                if from_code in source_font
-                else f'uni{from_code:04X}'
-            )
+    with PBar(total=0xFF + 1) as pbar:
+        for from_code in range(0x00, 0xFF + 1):
+            if from_code in mapping:
+                unicode_code, glyph_name = mapping[from_code]
+                if not glyph_name and isinstance(unicode_code, int):
+                    glyph_name = f'uni{unicode_code:04X}'
+            else:
+                unicode_code = from_code
+                glyph_name = (
+                    source_font[from_code].glyphname
+                    if from_code in source_font
+                    else f'uni{from_code:04X}'
+                )
 
-        # Convert glyph names to unicode positions for proper selection
-        if isinstance(unicode_code, str):
-            # Try to find the glyph by name in the source font
-            try:
-                glyph = source_font[unicode_code]
-                actual_unicode = glyph.unicode
-                if actual_unicode < 0:
-                    # Glyph has no unicode mapping, skip it
-                    print(f'  Skipping {unicode_code} (no unicode mapping) for 0x{from_code:02X}')
+            # Convert glyph names to unicode positions for proper selection
+            if isinstance(unicode_code, str):
+                # Try to find the glyph by name in the source font
+                try:
+                    glyph = source_font[unicode_code]
+                    actual_unicode = glyph.unicode
+                    if actual_unicode < 0:
+                        # Glyph has no unicode mapping, skip it
+                        print(f'\x1b[31m  Skipping {unicode_code} (no unicode mapping) for 0x{from_code:02X}\x1b[0m')
+                        continue
+                    unicode_code = actual_unicode
+                except (TypeError, KeyError):
+                    print(f'\x1b[31m  Warning: glyph {unicode_code} not found in source font for 0x{from_code:02X}\x1b[0m')
                     continue
-                unicode_code = actual_unicode
-            except (TypeError, KeyError):
-                print(
-                    f'  Warning: glyph {unicode_code} not found in source font for 0x{from_code:02X}'
-                )
-                continue
 
-        if unicode_code not in source_to_targets:
-            source_to_targets[unicode_code] = []
-        source_to_targets[unicode_code].append((from_code, glyph_name))
+            if unicode_code not in source_to_targets:
+                source_to_targets[unicode_code] = []
+            source_to_targets[unicode_code].append((from_code, glyph_name))
+            pbar.update(1)
 
-    # Process each unique source glyph
-    for unicode_code, targets in source_to_targets.items():
-        # Copy once from source
-        try:
-            source_font.selection.select(unicode_code)
-            source_font.copy()
+    with PBar(sum(len(targets) for targets in source_to_targets.values())) as pbar:
+        # Process each unique source glyph
+        for unicode_code, targets in source_to_targets.items():
+            # Copy once from source
+            try:
+                source_font.selection.select(unicode_code)
+                source_font.copy()
 
-            # Paste to all targets
-            for from_code, glyph_name in targets:
-                print(
-                    f'  Copying 0x{unicode_code:04X} to 0x{from_code:02X} ({glyph_name})...',
-                    end='',
-                )
-                remap_glyph(source_font, new_font, unicode_code, from_code, glyph_name, offset)
-            print(' > done')
-        except (ValueError, TypeError) as e:
-            print(f' \x1b[31m(error: {e})\x1b[0m')
+                # Paste to all targets
+                for from_code, glyph_name in targets:
+                    print(
+                        f'  Copying 0x{f"{unicode_code:04X}":<8} > 0x{f"{from_code:02X}":<8} {f"({glyph_name})":<15}',
+                        end='',
+                    )
+                    pbar.update(1)
+                    remap_glyph(source_font, new_font, unicode_code, from_code, glyph_name, offset)
+                    print(' \x1b[32mdone\x1b[0m')
+            except (ValueError, TypeError) as e:
+                print(f' \x1b[31m(error: {e})\x1b[0m')
 
     source_font.close()
 
@@ -476,8 +480,8 @@ def remap_font(input_font, output_font, encoding):
     FontMetrics.to_font(font, dims)
     font.generate(output_font)
 
-    print('Old font metrics:', json.dumps(dims._asdict(), indent=2))
-    print('New font metrics:', json.dumps(FontMetrics.from_font(font)._asdict(), indent=2))
+    print(f'Old font metrics\n{dims}')
+    print(f'New font metrics\n{FontMetrics.from_font(font)}')
     print(f'\nSaved new font to: {output_font} ({font.familyname})')
     font.close()
 

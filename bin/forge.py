@@ -6,6 +6,7 @@ import sys
 from typing import NamedTuple
 
 import fontforge
+from laser_prynter.pbar import PBar
 
 
 class FontMetrics(NamedTuple):
@@ -52,6 +53,12 @@ class FontMetrics(NamedTuple):
         font.os2_windescent       = dims.os2_windescent
         font.os2_use_typo_metrics = True
 
+    def __str__(self):
+        s = 'FontMetrics:'
+        for field in self._fields:
+            s += f'\n  {f"{field}:":<16} = {getattr(self, field)}'
+        return s
+
 
 OFFSETS = {
     # amiga fonts
@@ -89,7 +96,8 @@ def calculate_scale_factor(sourceFont, targetFont, reference_chars=[32, 65, 77, 
             if char_code in sourceFont and char_code in targetFont:
                 source_widths.append(sourceFont[char_code].width)
                 target_widths.append(targetFont[char_code].width)
-        except:
+        except Exception as e:
+            print(f'Error finding widths for char code {char_code}: {e}')
             continue
 
     if source_widths and target_widths:
@@ -103,6 +111,9 @@ def calculate_scale_factor(sourceFont, targetFont, reference_chars=[32, 65, 77, 
     return 1.0
 
 def copyTo(sourceFont, sourceIdx, targetFont, targetIdx, sourceDims=None, targetDims=None, scale_x=1.0):
+
+    print(f'\x1b[93m{"["+sourceFont.fontname+"]":<22s}\x1b[0m copying: \\u{sourceIdx:<4} > \\u{targetIdx:<6}', end='')
+
     sourceFont.selection.select(sourceIdx)
     sourceFont.copy()
 
@@ -131,12 +142,12 @@ def copyTo(sourceFont, sourceIdx, targetFont, targetIdx, sourceDims=None, target
         needs_transform = True
 
     if needs_transform:
-        print(f'> applying transformation: scale_x={scale_x}, offset_y={offset_y}')
+        print(f'- \x1b[3mtransformed [scale_x: {scale_x}, offset_y: {offset_y}]\x1b[0m', end='')
         # Create transformation matrix: [xx, xy, yx, yy, dx, dy]
         matrix = (scale_x, 0, 0, 1, 0, offset_y)
         glyph.transform(matrix)
 
-    print(f', copied: {sourceFont.fontname} {sourceIdx} > {targetIdx}')
+    print(' \x1b[32mdone\x1b[0m')
 
 
 print(f'converting {sys.argv[1]} to {sys.argv[2]}')
@@ -151,38 +162,46 @@ base_font.familyname = sys.argv[3]
 dims = FontMetrics.from_font(base_font)
 
 print(f'Using metrics from: {fonts["TopazPlus_a1200_v1.0.patched.ttf"]["fpath"]}')
-print(f'> {dims.em_size=}, {dims.ascent=}, {dims.descent=}, {dims.os2_typoascent=}, {dims.os2_typodescent=}, {dims.os2_typolinegap=}')
+print(dims, end='\n\n')
 
 print('Included fonts:')
 print('\n'.join([f' - {name}: {info["fpath"]}' for name, info in fonts.items()]))
-for font_name in OFFSETS:
-    if font_name not in fonts:
-        print(f'skipping missing font: {font_name}')
-        continue
-    font = fonts.get(font_name)
 
-    print(f'> modifying font: {font_name} - {font['fpath']}')
-    source_font = fontforge.open(font['fpath'])
-    source_font.encoding = 'UnicodeFull'
-    source_dims = FontMetrics.from_font(source_font)
-    print(f'> {source_font.em=}, {source_font.ascent=}, {source_font.descent=}, {source_font.os2_typoascent=}, {source_font.os2_typodescent=}, {source_font.os2_typolinegap=}')
+with PBar(len(OFFSETS)*256) as pbar:
+    for fname in OFFSETS:
+        if fname not in fonts:
+            print(f'skipping missing font: {fname}')
+            continue
+        font = fonts[fname]
 
-    # Calculate horizontal scaling factor dynamically
-    if 'ibm' in font_name:
-        scale_x = calculate_scale_factor(source_font, base_font)
-        if scale_x != 1.0:
-            print(f'> calculated horizontal scale factor: {scale_x:.3f}')
-    else:
-        scale_x = 1.0
-    if font_name == 'TopazPlus_a1200_v1.0.patched.ttf':
-        for i in range(256):
-            copyTo(source_font, i, base_font, i, source_dims, dims, scale_x)
+        print("\n".join([
+            '-' * 40,
+            'modifying',
+            f'  fname: {fname}',
+        ]))
+        source_font = fontforge.open(font['fpath'])
+        source_font.encoding = 'UnicodeFull'
+        source_dims = FontMetrics.from_font(source_font)
+        print(source_dims, end='\n\n')
 
-    for i in range(256):
-        if i == 0x20:
-            copyTo(base_font, i, base_font, i + font['offset'], source_dims, dims, scale_x)
+        # Calculate horizontal scaling factor dynamically
+        if 'ibm' in fname:
+            scale_x = calculate_scale_factor(source_font, base_font)
+            if scale_x != 1.0:
+                print(f'> calculated horizontal scale factor: {scale_x:.3f}')
         else:
-            copyTo(source_font, i, base_font, i + font['offset'], source_dims, dims, scale_x)
+            scale_x = 1.0
+        if fname == 'TopazPlus_a1200_v1.0.patched.ttf':
+            for i in range(256):
+                copyTo(source_font, i, base_font, i, source_dims, dims, scale_x)
+                pbar.update(1)
+
+        for i in range(256):
+            if i == 0x20:
+                copyTo(base_font, i, base_font, i + font['offset'], source_dims, dims, scale_x)
+            else:
+                copyTo(source_font, i, base_font, i + font['offset'], source_dims, dims, scale_x)
+            pbar.update(1)
 
 
 FontMetrics.to_font(base_font, dims)

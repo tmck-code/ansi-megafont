@@ -1,0 +1,25 @@
+on: [push]
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Remap fonts
+      run: >
+        docker run --rm
+        --pull missing
+        -u root
+        -v ${{ github.workspace }}/fonts:/app/fonts
+        -v ${{ github.workspace }}/bin:/app/bin
+        ghcr.io/tmck-code/ansi-megafont:latest
+        ./ops/remap.sh
+    - name: Forge megafont
+      run: >
+        docker run --rm
+        --pull missing
+        -v ${{ github.workspace }}/fonts:/app/fonts
+        -v ${{ github.workspace }}/bin:/app/bin
+        ghcr.io/tmck-code/ansi-megafont:latest
+        sh -c "fontforge -script ./bin/forge.py ./fonts/remapped/ ./fonts/ANSICombined.ttf 'ANSI Combined' 2> /dev/null"
