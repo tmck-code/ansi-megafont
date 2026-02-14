@@ -20,7 +20,7 @@ docker/forge:
 			fontforge -script ./bin/forge.py \
 				./fonts/remapped/ \
 				./fonts/ANSICombined.ttf \
-				'ANSI Combined'
+				'ANSI Combined' 2> /dev/null
 
 all: docker/build docker/fonts docker/forge
 
