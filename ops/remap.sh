@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+set -euxo pipefail
 
 mkdir -p /app/fonts/remapped
 
@@ -19,8 +19,8 @@ for font in "${fonts[@]}"; do
   fontforge -script bin/remap.py \
     "/fonts/amigafonts/ttf/${font}" \
     "/app/fonts/remapped/${font%.ttf}.patched.ttf" \
-    ISO \
-    2>/dev/null
+    ISO
+    # \ 2>/dev/null
 done
 
 fontforge -script bin/remap.py \
