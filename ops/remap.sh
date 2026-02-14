@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-mkdir -p ./patched
+mkdir -p /app/fonts/remapped
 
 fonts=(
   "Topaz_a500_v1.0.ttf"
