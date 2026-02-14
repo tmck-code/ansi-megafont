@@ -463,7 +463,7 @@ def remap_font(input_font, output_font, encoding):
                     )
                     pbar.update(1)
                     remap_glyph(source_font, new_font, unicode_code, from_code, glyph_name, offset)
-                print(' \x1b[32mdone\x1b[0m')
+                    print(' \x1b[32mdone\x1b[0m')
             except (ValueError, TypeError) as e:
                 print(f' \x1b[31m(error: {e})\x1b[0m')
 
