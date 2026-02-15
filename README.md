@@ -1,5 +1,7 @@
 # ansi-megafont
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/tmck-code/ansi-megafont/test.yml)
+
 A single font for displaying ANSI art images in modern terminals that combines several original Amiga & IBM fonts.
 
 - [ansi-megafont](#ansi-megafont)
