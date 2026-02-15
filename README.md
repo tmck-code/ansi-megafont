@@ -21,7 +21,7 @@ Download the font file from the [latest release](https://github.com/tmck-code/an
 To install:
 - download the [`latest release`](https://github.com/tmck-code/ansi-megafont)
 - install it on your system via your regular font installer
-- and ensure that your terminal emulator is configured to use it._
+- _ensure that your terminal emulator is configured to use it._
 
 <details>
 <summary>
