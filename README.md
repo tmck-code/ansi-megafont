@@ -1,6 +1,6 @@
 # ansi-megafont
 
-A single font for displaying ANSI images that combines several Amiga & IBM fonts.
+A single font for displaying ANSI art images in modern terminals that combines several original Amiga & IBM fonts.
 
 - [ansi-megafont](#ansi-megafont)
   - [Get the font](#get-the-font)
