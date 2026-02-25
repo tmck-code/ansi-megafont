@@ -143,10 +143,11 @@ print(dims, end='\n\n')
 print('Included fonts:')
 print('\n'.join([f' - {name}: {info["fpath"]}' for name, info in fonts.items()]))
 
-with PBar(len(OFFSETS)*256) as pbar:
+with PBar((len(OFFSETS)+1)*256, *PBar.randgrad()) as pb:
     for fname in OFFSETS:
         if fname not in fonts:
             print(f'skipping missing font: {fname}')
+            pb.update(256)
             continue
         font = fonts[fname]
 
@@ -170,14 +171,14 @@ with PBar(len(OFFSETS)*256) as pbar:
         if fname == 'TopazPlus_a1200_v1.0.patched.ttf':
             for i in range(256):
                 copyTo(source_font, i, base_font, i, source_dims, dims, scale_x)
-                pbar.update(1)
+                pb.update(1)
 
         for i in range(256):
             if i == 0x20:
                 copyTo(base_font, i, base_font, i + font['offset'], source_dims, dims, scale_x)
             else:
                 copyTo(source_font, i, base_font, i + font['offset'], source_dims, dims, scale_x)
-            pbar.update(1)
+            pb.update(1)
 
 
 FontMetrics.to_font(base_font, dims)

@@ -413,7 +413,7 @@ def remap_font(input_font, output_font, encoding):
 
     # Group mappings by source to avoid repeated copying of the same glyph
     source_to_targets = {}
-    with PBar(total=0xFF + 1) as pbar:
+    with PBar(0xFF+1, *PBar.randgrad()) as pb:
         for from_code in range(0x00, 0xFF + 1):
             if from_code in mapping:
                 unicode_code, glyph_name = mapping[from_code]
@@ -445,9 +445,9 @@ def remap_font(input_font, output_font, encoding):
             if unicode_code not in source_to_targets:
                 source_to_targets[unicode_code] = []
             source_to_targets[unicode_code].append((from_code, glyph_name))
-            pbar.update(1)
+            pb.update(1)
 
-    with PBar(sum(len(targets) for targets in source_to_targets.values())) as pbar:
+    with PBar(sum(len(targets) for targets in source_to_targets.values()), *PBar.randgrad()) as pb:
         # Process each unique source glyph
         for unicode_code, targets in source_to_targets.items():
             # Copy once from source
@@ -461,7 +461,7 @@ def remap_font(input_font, output_font, encoding):
                         f'  Copying 0x{f"{unicode_code:04X}":<8} > 0x{f"{from_code:02X}":<8} {f"({glyph_name})":<15}',
                         end='',
                     )
-                    pbar.update(1)
+                    pb.update(1)
                     remap_glyph(source_font, new_font, unicode_code, from_code, glyph_name, offset)
                     print(' \x1b[32mdone\x1b[0m')
             except (ValueError, TypeError) as e:
