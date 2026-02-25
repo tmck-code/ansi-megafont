@@ -86,30 +86,6 @@ def find_files(dirpath: str) -> dict[str, dict[str, str | int]]:
     return font_paths
 
 
-def calculate_scale_factor(sourceFont, targetFont, reference_chars=[32, 65, 77, 88]):
-    'Calculate horizontal scaling factor by comparing glyph widths.'
-    source_widths = []
-    target_widths = []
-
-    for char_code in reference_chars:
-        try:
-            if char_code in sourceFont and char_code in targetFont:
-                source_widths.append(sourceFont[char_code].width)
-                target_widths.append(targetFont[char_code].width)
-        except Exception as e:
-            print(f'Error finding widths for char code {char_code}: {e}')
-            continue
-
-    if source_widths and target_widths:
-        avg_source = sum(source_widths) / len(source_widths)
-        avg_target = sum(target_widths) / len(target_widths)
-        if avg_source > 0:
-            ratio = avg_target / avg_source
-            # hack
-            return ratio * 1.06
-
-    return 1.0
-
 def copyTo(sourceFont, sourceIdx, targetFont, targetIdx, sourceDims=None, targetDims=None, scale_x=1.0):
 
     print(f'\x1b[93m{"["+sourceFont.fontname+"]":<22s}\x1b[0m copying: \\u{sourceIdx:<4} > \\u{targetIdx:<6}', end='')
@@ -184,11 +160,11 @@ with PBar(len(OFFSETS)*256) as pbar:
         source_dims = FontMetrics.from_font(source_font)
         print(source_dims, end='\n\n')
 
-        # Calculate horizontal scaling factor dynamically
+        # Emprically, I've found that scaling the "Ac437_IBM_VGA_9x16" font by 1.3x
+        # produces an identical result to 16colo.rs reference PNGs
+        # TODO: update this when adding more IBM fonts
         if 'ibm' in fname:
-            scale_x = calculate_scale_factor(source_font, base_font)
-            if scale_x != 1.0:
-                print(f'> calculated horizontal scale factor: {scale_x:.3f}')
+            scale_x = 1.3
         else:
             scale_x = 1.0
         if fname == 'TopazPlus_a1200_v1.0.patched.ttf':
