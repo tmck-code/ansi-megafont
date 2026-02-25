@@ -33,12 +33,12 @@ Alternatively, you can install using one of these commands:
 
 ```shell
 # osx
-curl -sOL --output-dir ~/Library/Fonts/ https://github.com/tmck-code/ansi-megafont/releases/download/v0.1.2/ANSICombined-0.1.2.ttf \
+curl -sOL --output-dir ~/Library/Fonts/ https://github.com/tmck-code/ansi-megafont/releases/download/v0.1.3/ANSICombined-0.1.2.ttf \
   && fc-cache -f ~/Library/Fonts/ \
   && fc-list | grep "ANSICombined"
 
 # linux
-curl -sOL --output-dir ~/.fonts/ https://github.com/tmck-code/ansi-megafont/releases/download/v0.1.2/ANSICombined-0.1.2.ttf \
+curl -sOL --output-dir ~/.fonts/ https://github.com/tmck-code/ansi-megafont/releases/download/v0.1.3/ANSICombined-0.1.2.ttf \
   && fc-cache -f ~/.fonts/ \
   && fc-list | grep "ANSICombined"
 ```
