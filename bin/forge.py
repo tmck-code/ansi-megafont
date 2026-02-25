@@ -164,7 +164,7 @@ with PBar((len(OFFSETS)+1)*256, *PBar.randgrad()) as pb:
         # Emprically, I've found that scaling the "Ac437_IBM_VGA_9x16" font by 1.3x
         # produces an identical result to 16colo.rs reference PNGs
         # TODO: update this when adding more IBM fonts
-        if 'ibm' in fname:
+        if 'ibm' in fname.lower():
             scale_x = 1.3
         else:
             scale_x = 1.0
